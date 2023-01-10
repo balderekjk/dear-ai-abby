@@ -69,7 +69,7 @@ function App() {
               onClick={getLast}
               style={{ width: 'fit-content' }}
             >
-              From Recent ({abbyId && page + 1})
+              From Recent ({abbyId ? page + 1 : abby.length})
             </button>
           </div>
           <div className="card">
