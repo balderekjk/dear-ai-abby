@@ -5,15 +5,23 @@ import './App.css';
 function App() {
   const [abbyId, setAbbyId] = useState(-1);
   const [theme, setTheme] = useState('light');
+  const [page, setPage] = useState(-1);
 
   const rerollId = () => {
-    setAbbyId(-1);
     setAbbyId(Math.floor(Math.random() * abby.length));
+    setPage(abby.length - 1);
   };
 
   const getLast = () => {
-    setAbbyId(-1);
-    setAbbyId(abby.length - 1);
+    if (abbyId) {
+      if (page > 0 && page < 10) {
+        setPage(page - 1);
+      }
+      setAbbyId(page);
+    } else {
+      setPage(abby.length - 2);
+      setAbbyId(abby.length - 1);
+    }
   };
 
   useEffect(() => {
@@ -59,7 +67,7 @@ function App() {
               onClick={getLast}
               style={{ width: 'fit-content' }}
             >
-              Last Added
+              From Recent ({abbyId && page + 1})
             </button>
           </div>
           <div className="card">

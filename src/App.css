@@ -10,7 +10,6 @@ hr {
 }
 
 button {
-  cursor: pointer;
   font-size: 1em;
 }
 
@@ -67,6 +66,7 @@ p {
   background: hsl(240, 100%, 50%);
   border: 1px solid hsl(240, 100%, 30%);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .prime:hover {
@@ -86,6 +86,14 @@ p {
   bottom: 42px;
   left: 140px;
   margin-bottom: -30px;
+  cursor: pointer;
+}
+
+.disabled {
+  color: hsla(0, 0%, 6%, 0.3);
+  background: hsla(0, 0%, 94%, 0.4);
+  border: 1px solid hsla(0, 0%, 46%, 0.3);
+  border-radius: 4px;
 }
 
 .inherit-width {
