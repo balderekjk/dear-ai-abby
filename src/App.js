@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import abby from './db.json';
 import './App.css';
 
-// I am a high school senior. With graduation day fast approaching, I have some pressing questions. First, what are the rules of etiquette regarding sending invitations/announcements? Do I have to invite all the members of my family to my graduation party that is supposed to be for my friends? (I would rather not even see most of these relatives, but my grandmother is insisting that I invite them.) Second, what is the best way to keep track of gifts, so I can properly thank the gift-givers? I would greatly appreciate your input.
-
 function App() {
   const [abbyId, setAbbyId] = useState(-1);
   const [page, setPage] = useState(-1);
