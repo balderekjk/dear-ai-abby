@@ -35,6 +35,7 @@ function App() {
           position: 'relative',
           bottom: '42px',
           left: '140px',
+          marginBottom: '-30px',
         }}
         className="moon-btn"
       >
