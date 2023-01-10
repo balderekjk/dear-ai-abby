@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [abbyId, setAbbyId] = useState(-1);
+  const [theme, setTheme] = useState('light');
 
   const rerollId = () => {
     setAbbyId(-1);
@@ -20,8 +21,25 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <h1 style={{ marginBottom: '6px' }}>Dear A.I.</h1>
+      <button
+        onClick={() => {
+          if (theme === 'light') {
+            setTheme('dark');
+          } else {
+            setTheme('light');
+          }
+        }}
+        style={{
+          position: 'relative',
+          bottom: '42px',
+          left: '140px',
+        }}
+        className="moon-btn"
+      >
+        {theme === 'light' ? <>&#127769;</> : <>&#128161;</>}
+      </button>
       <p style={{ margin: '0 6px 8px', maxWidth: '425px' }}>
         Made possible by Abigail Van Buren's "Dear Abby" advice column. And
         OpenAI's ChatGPT.
@@ -34,10 +52,18 @@ function App() {
       {abbyId !== -1 ? (
         <>
           <div className="btns">
-            <button onClick={rerollId} style={{ width: 'fit-content' }}>
+            <button
+              className="prime"
+              onClick={rerollId}
+              style={{ width: 'fit-content' }}
+            >
               Reroll
             </button>
-            <button onClick={getLast} style={{ width: 'fit-content' }}>
+            <button
+              className="prime"
+              onClick={getLast}
+              style={{ width: 'fit-content' }}
+            >
               Last Added
             </button>
           </div>
