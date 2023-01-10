@@ -31,12 +31,6 @@ function App() {
             setTheme('light');
           }
         }}
-        style={{
-          position: 'relative',
-          bottom: '42px',
-          left: '140px',
-          marginBottom: '-30px',
-        }}
         className="moon-btn"
       >
         {theme === 'light' ? <>&#127769;</> : <>&#128161;</>}
