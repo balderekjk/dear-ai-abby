@@ -10,6 +10,11 @@ function App() {
     setAbbyId(Math.floor(Math.random() * abby.length));
   };
 
+  const getLast = () => {
+    setAbbyId(-1);
+    setAbbyId(abby.length - 1);
+  };
+
   useEffect(() => {
     rerollId();
   }, []);
@@ -26,9 +31,14 @@ function App() {
 
       {abbyId !== -1 ? (
         <>
-          <button onClick={rerollId} style={{ width: 'fit-content' }}>
-            Reroll
-          </button>
+          <div className="btns">
+            <button onClick={rerollId} style={{ width: 'fit-content' }}>
+              Reroll
+            </button>
+            <button onClick={getLast} style={{ width: 'fit-content' }}>
+              Last Added
+            </button>
+          </div>
           <div className="card">
             <p className="inherit-width">
               <strong>Date: </strong>
