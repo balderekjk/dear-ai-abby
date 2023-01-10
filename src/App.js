@@ -22,9 +22,9 @@ function App() {
   return (
     <div className="App">
       <h1 style={{ marginBottom: '6px' }}>Dear A.I.</h1>
-      <p style={{ marginTop: 0, maxWidth: '450px' }}>
-        Made possible by Abigail Van Buren's advice column. And OpenAI's
-        ChatGPT.
+      <p style={{ margin: '0 6px 0', maxWidth: '450px' }}>
+        Made possible by Abigail Van Buren's "Dear Abby" advice column. And
+        OpenAI's ChatGPT.
         <br />
         There are currently {abby.length} entries in the database.
       </p>
