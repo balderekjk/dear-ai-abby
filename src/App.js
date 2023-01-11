@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import abby from './db.json';
 import './App.css';
 
+// My wife and I recently hosted some longtime friends for a few days while they were passing through our area on vacation. We had a fine time reconnecting, although my wife commented after they left that they seemed to have "slowed down a bit" -- to which I responded, "Yeah. Us, too, I guess." We just received an email from that couple's adult daughter, with whom we're also friendly, asking about our perceptions of her parents' well-being. We are not comfortable responding to her very pointed questions about their eating habits, bedtimes, taking of medications, mental sharpness, etc. while they stayed with us. Is this kind of inquiry common today, or do these folks have "helicopter kids"?
+
 function App() {
   const [abbyId, setAbbyId] = useState(-1);
   const [page, setPage] = useState(-1);
