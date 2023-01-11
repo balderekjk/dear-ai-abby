@@ -25,6 +25,10 @@ function App() {
   };
 
   useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour > 18 || hour < 6) {
+      setTheme('dark');
+    }
     rerollId();
   }, []);
 
@@ -72,7 +76,7 @@ function App() {
           </div>
           <div className="card">
             <p className="inherit-width">
-              <strong>Date: </strong>
+              <strong>Publish Date: </strong>
               {abby[`${abbyId}`]['date']}
             </p>
             <hr />
@@ -82,15 +86,23 @@ function App() {
             <div>{abby[`${abbyId}`]['concern']}</div>
             <hr />
             <p className="inherit-width">
-              <strong>Abby:</strong>
+              <strong>Abby (thoughtful person writer):</strong>
             </p>
             <div>{abby[`${abbyId}`]['abbyResponse']}</div>
             <hr />
             <p className="inherit-width">
-              <strong>ChatGPT:</strong>
+              <strong>ChatGPT (artificial intelligence):</strong>
             </p>
             <div>{abby[`${abbyId}`]['aiResponse']}</div>
           </div>
+          <a
+            href="https://freeonlinesurveys.com/s/uYjmPoRB"
+            target="_blank"
+            rel="noreferrer"
+            style={{ marginBottom: '14px', fontSize: '1.2em' }}
+          >
+            Take the Dear A.I. Survey
+          </a>
         </>
       ) : (
         'loading...'
