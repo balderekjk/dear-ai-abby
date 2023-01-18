@@ -51,8 +51,7 @@ function App() {
         Made possible by Abigail Van Buren's "Dear Abby" advice column. And
         OpenAI's ChatGPT.
         <br />
-        There are currently {abby.length} entries in the database. Updated
-        daily.
+        There are currently {abby.length} entries in the database.
         <br />
       </p>
 
